@@ -37,17 +37,19 @@ const List = (prop) => {
       <TableHead>
         <TableRow>
           <TableCell><strong>Spaceship Name</strong></TableCell>
-          <TableCell><strong>Stops for inputed distance ({prop.param})</strong></TableCell>
+          <TableCell><strong>Ship Speed (MGLT)</strong></TableCell>
+          <TableCell><strong>Average travel time</strong></TableCell>
         </TableRow>
         {prop.param 
           ?
             spaceshipsList.map(spc => 
             <TableRow>
               <TableCell align="left">{spc.name}</TableCell>
-              <TableCell align="center">{isNaN(spc.MGLT) ? 'unknown' : prop.param/spc.MGLT}</TableCell>
+              <TableCell align="center">{isNaN(spc.MGLT) ? 'unknown' : `${spc.MGLT} MGLT/h`} </TableCell>
+              <TableCell align="center">{isNaN(spc.MGLT) ? 'unknown' : `${prop.param/spc.MGLT}h` } </TableCell>
             </TableRow>)
           :
-          <p className={classes.wrapper}>Type a number below</p>
+          <p className={classes.wrapper}>Type a number above</p>
         }
       </TableHead>
     </div>

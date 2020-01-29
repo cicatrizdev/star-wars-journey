@@ -27,7 +27,7 @@ export default function Header() {
       <AppBar className={classes.appBar} position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Star Wars - Journey Stops
+            Star Wars - Journey Travel
           </Typography>
         </Toolbar>
       </AppBar>

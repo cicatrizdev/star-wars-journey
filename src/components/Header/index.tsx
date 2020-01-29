@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
+      width: '100%',
     },
     appBar: {
       background: 'red',
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function ButtonAppBar() {
+export default function Header() {
   const classes = useStyles();
 
   return (

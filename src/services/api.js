@@ -2,7 +2,7 @@ export const getSpaceships = async () => {
   let count = 1;
   let spaceshipList = []
   while (count <= 4) {
-    let res = await fetch(`https://swapi.co/api/starships/?page=${count}`);
+    let res = await fetch(`https://swapi.dev/api/starships/?page=${count}`);
     const resJson = await res.json();
     spaceshipList = spaceshipList.concat(resJson.results.map(spaceship => ({
       name: spaceship.name,
@@ -14,4 +14,3 @@ export const getSpaceships = async () => {
   
   return await spaceshipList;
 };
-
